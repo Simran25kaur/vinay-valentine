@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>For Vinay ❤️</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Background music -->
+  <audio id="bgMusic" autoplay loop>
+    <source src="https://www.bensound.com/bensound-music/bensound-sweet.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <!-- INTRO -->
+  <section class="hero">
+    <div class="content">
+      <h1>Hey Vinay…</h1>
+      <p>Before you scroll, I want you to read this slowly.</p>
+      <span>❤️</span>
+    </div>
+  </section>
+
+  <!-- STORY -->
+  <section class="section fade">
+    <p class="story">
+      Somewhere between our conversations,  
+      our laughter, and our silences…  
+      you became my safe place.
+    </p>
+  </section>
+
+  <section class="section soft fade">
+    <p class="story">
+      You saw me when I wasn’t at my best,  
+      and you stayed.  
+      That meant more to me than you know.
+    </p>
+  </section>
+
+  <section class="section fade">
+    <p class="story">
+      Loving you feels calm.  
+      It feels warm.  
+      It feels like home.
+    </p>
+  </section>
+
+  <!-- QUESTION -->
+  <section class="section question fade">
+    <h2>So today…</h2>
+    <h1>Will you be my Valentine? ❤️</h1>
+
+    <div class="buttons" style="position: relative; height: 80px;">
+      <button onclick="yes()" style="position: relative; z-index:2;">Yes</button>
+      <button id="noBtn">No</button>
+    </div>
+
+    <p id="answer"></p>
+  </section>
+
+  <!-- FINAL HIDDEN MESSAGE -->
+  <section class="final" id="final">
+    <h1>For You, Vinay ❤️</h1>
+    <p>
+      Thank you for choosing me.  
+      Thank you for loving me the way you do.  
+      I promise to choose you — on easy days,  
+      on hard days, and on all the days in between.
+    </p>
+    <p class="signature">
+      Always yours,  
+      <br>❤️
+    </p>
+  </section>
+
+  <script>
+    const noMessages = [
+      "You can’t escape love 🥰",
+      "Come on… you know you love me ❤️",
+      "Try again… your heart knows the answer 💕",
+      "Nope! Love always wins 😘",
+      "You can’t say no to me 🫣"
+    ];
+
+    const noBtn = document.getElementById("noBtn");
+    const answer = document.getElementById("answer");
+
+    // YES button
+    function yes() {
+      document.getElementById("final").style.display = "flex";
+      answer.innerHTML = "";
+      window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+    }
+
+    // NO button behavior: move & show cute message
+    noBtn.addEventListener("mouseenter", () => {
+      const x = Math.floor(Math.random() * 70); // percent
+      const y = Math.floor(Math.random() * 70);
+      noBtn.style.position = "absolute";
+      noBtn.style.left = x + "%";
+      noBtn.style.top = y + "px";
+
+      const msg = noMessages[Math.floor(Math.random() * noMessages.length)];
+      answer.innerHTML = msg;
+    });
+  </script>
+
+</body>
+</html>
