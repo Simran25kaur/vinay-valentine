@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>For Vinay ❤️</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- INTRO -->
+  <section class="hero">
+    <div class="content">
+      <h1>Hey Vinay…</h1>
+      <p>Before you scroll, I want you to read this slowly.</p>
+      <span>❤️</span>
+    </div>
+  </section>
+
+  <!-- STORY -->
+  <section class="section">
+    <p class="story">
+      Somewhere between our conversations,  
+      our laughter, and our silences…  
+      you became my safe place.
+    </p>
+  </section>
+
+  <section class="section soft">
+    <p class="story">
+      You saw me when I wasn’t at my best,  
+      and you stayed.  
+      That meant more to me than you know.
+    </p>
+  </section>
+
+  <section class="section">
+    <p class="story">
+      Loving you feels calm.  
+      It feels warm.  
+      It feels like home.
+    </p>
+  </section>
+
+  <!-- QUESTION -->
+  <section class="section question">
+    <h2>So today…</h2>
+    <h1>Will you be my Valentine? ❤️</h1>
+
+    <div class="buttons">
+      <button onclick="yes()">Yes</button>
+      <button class="no">No</button>
+    </div>
+  </section>
+
+  <!-- FINAL HIDDEN MESSAGE -->
+  <section class="final" id="final">
+    <h1>For You, Vinay ❤️</h1>
+    <p>
+      Thank you for choosing me.  
+      Thank you for loving me the way you do.  
+      I promise to choose you — on easy days,  
+      on hard days, and on all the days in between.
+    </p>
+    <p class="signature">
+      Always yours,  
+      <br>❤️
+    </p>
+  </section>
+
+  <script>
+    function yes() {
+      document.getElementById("final").style.display = "flex";
+      window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+    }
+  </script>
+
+</body>
+</html>
